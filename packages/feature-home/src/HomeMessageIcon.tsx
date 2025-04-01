@@ -1,10 +1,7 @@
-import { Paragraph } from '@acme/ui';
-import { ComponentProps } from 'react';
+import { Text, TextProps } from 'react-native';
 
-type HomeMessageIconProps = ComponentProps<typeof Paragraph>;
-
-export const HomeMessageIcon = ({ style, ...props }: HomeMessageIconProps) => (
-  <Paragraph style={[{ fontSize: 28 }, style]} {...props}>
+export const HomeMessageIcon = ({ style, ...props }: TextProps) => (
+  <Text style={[{ fontSize: 28 }, style]} {...props}>
     👋
-  </Paragraph>
+  </Text>
 );
