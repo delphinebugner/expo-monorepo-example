@@ -6,13 +6,25 @@
 
 ## 🐞 This is a repro for https://github.com/dominicstop/react-native-ios-utilities/issues/21
 
+
 To use it:
 
-- [install pnpm](https://github.com/dominicstop/react-native-ios-utilities/issues/21)
+- Prerequisite: [install pnpm](https://github.com/dominicstop/react-native-ios-utilities/issues/21) 
+- run on an iOS simulator 
+  
 - `$ cd apps/example`
-- `$ pnpm install` - This installs all required Node libraries using [pnpm](https://pnpm.io/).
-- Check on your Finder that the `node_modules` are symlinked
-- `$ pnpm dev` - Starts the development servers for all **apps** (currently juste one working).
+- `$ pnpm install` - installs all required Node libraries using [pnpm](https://pnpm.io/) 
+- Optional: Check on your Finder that the `node_modules` are symlinked
+
+- `$ pnpm build:ios` - Prebuilds and builds the native code following Expo standard
+- `$ pnpm dev` - Starts the development server
+- Open the app: it instantanely crashes
+
+Double check that app is working without Context Menu:
+
+- Go to `apps/example/app/(tabs)/index.tsx` and remove the `Menu` component
+- Re-open the app: it does not crash anymore
+
 
 
 # Old Read Me
