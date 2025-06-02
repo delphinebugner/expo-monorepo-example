@@ -1,0 +1,13 @@
+diff --git a/scripts/codegen/generate-artifacts-executor.js b/scripts/codegen/generate-artifacts-executor.js
+index 6b4e7b730a9109b5fc0b0dfd0fbcb4d3c3495835..6ad7add99d4dff1d3bf3797ee477427483d1ab9a 100644
+--- a/scripts/codegen/generate-artifacts-executor.js
++++ b/scripts/codegen/generate-artifacts-executor.js
+@@ -769,7 +769,7 @@ function findFilesWithExtension(filePath, extension) {
+     }
+ 
+     // Skip hidden folders, that starts with `.`
+-    if (absolutePath.includes(`${path.sep}.`)) {
++    if (absolutePath.includes(`${path.sep}.`) && !absolutePath.includes(`${path.sep}.pnpm`)) {
+       return null;
+     }
+ 
